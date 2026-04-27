@@ -18,13 +18,14 @@
    - 无 DOI 有 arXiv ID → `WebFetch https://arxiv.org/abs/{id}`，同上比对；
    - 两者都无 → 用 `WebSearch` 搜索 `"标题" 作者 年份` 至少 1 个权威站点（dl.acm.org / ieeexplore / openreview / springer / nature / sciencedirect）确认存在；
 3. 三项有任一不匹配 → 丢弃，记录到核验日志，重新检索替代品；
-4. 通过的写入正文 `[N]` 编号 + 末尾参考文献条目（GB/T 7714 格式）。
+4. 通过的写入正文 `[N]` 编号占位 + 记录题名、作者、年份、来源、DOI/arXiv 等核验信息；最终参考文献格式交给 `NEU-undergraduate-Typesetting` 和学校模板处理。
 5. 全章节核验完成后输出汇总：通过 X 条 / 丢弃 Y 条 / 替代 Z 条。
 
 禁忌：
 - 不允许"凭印象"写引用；
 - 不允许猜测 DOI；
 - 不允许编造作者或年份。
+- 本 skill 只核验引用真实性与正文支撑关系，不引入非 NEU 的参考文献排版规范。
 
 ## 3. 降 AI 味（章节定稿前）
 

@@ -1,6 +1,6 @@
 ---
 name: NEU-undergraduate-Review
-description: 本科毕设论文只读审查 skill。四维评审：格式合规 / 文字行文 / 创新点+综合质量 / 查重AIGC。基于学校规范、形式审查表、质量评价表、评阅表给出报告。仅产出报告到 ./docs/paper/reviews/，禁止改稿。仅当用户为本科毕设/本科论文/毕业设计审查时触发。
+description: 本科毕设论文只读审查 skill。用于用户要求审查、评估、检查格式、检查行文质量、检查创新点、查重或检测 AIGC 的本科毕设/本科论文/毕业设计材料时触发；四维评审：格式合规、文字行文、创新点+综合质量、查重AIGC。仅产出报告到 ./docs/paper/reviews/，禁止改稿。
 ---
 
 # NEU-undergraduate-Review
@@ -25,6 +25,12 @@ description: 本科毕设论文只读审查 skill。四维评审：格式合规 
 
 ## 四维审查（细则在 `references/review_rubric.md`，按需 Read）
 
+审查内容质量时，可按需 Read 相邻 Writing skill 的参考文件：
+
+- `../NEU-undergraduate-Writing/references/content_quality_standards.md`
+- `../NEU-undergraduate-Writing/references/argument_evidence_rules.md`
+- `../NEU-undergraduate-Writing/references/style_and_deai_rules.md`
+
 ### 维度 1：格式合规
 依据：`templates/规范.docx` + `templates/形式审查表.docx`（附件 18）+ rubric 中格式分项清单。
 输出：每条规则 ☑/☒/⚠（不适用），附定位（页码/章节/行号），并给出修复建议。
@@ -35,6 +41,7 @@ description: 本科毕设论文只读审查 skill。四维评审：格式合规 
 
 ### 维度 3：创新点 + 综合质量
 - 基于 `context.md` 的"创新点列表"对照正文，标记「真创新 / 增量改进 / 复述他人」三档；
+- 检查一句话论文主线、贡献-证据映射、研究空白、标题后导语、实验-主张对应、绪论-结论闭合；
 - 按 `templates/质量评价表.doc`（附件 17 工学）+ `templates/评阅表.doc`（附件 13 评阅教师）的指标项给预评价分项；
 - 提示「导师/评阅人可能在此项扣分的位置」（精确到段或图表）。
 
@@ -68,6 +75,7 @@ description: 本科毕设论文只读审查 skill。四维评审：格式合规 
 
 ## 4 维度三：创新点 + 综合质量
 - 创新点逐条评级
+- 内容质量审查
 - 质量评价表预评分
 - 评阅表预评分
 - 高风险扣分项
@@ -84,6 +92,7 @@ description: 本科毕设论文只读审查 skill。四维评审：格式合规 
 ## 子文件
 
 - `references/review_rubric.md` — 四维评分细则
+- `../NEU-undergraduate-Writing/references/*.md` — 内容质量、论证链与降 AI 写作规则
 - `templates/规范.docx` — 格式审查依据副本
 - `templates/形式审查表.docx` — 附件 18 副本
 - `templates/质量评价表.doc` — 附件 17 副本
