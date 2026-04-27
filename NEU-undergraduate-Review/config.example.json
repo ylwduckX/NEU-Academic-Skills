@@ -1,0 +1,8 @@
+{
+  "_comment": "复制本文件为 ${PROJECT_ROOT}/docs/paper/_meta/review_config.json 并填入 endpoint+key。建议加入项目 .gitignore。任一字段 endpoint 与 key 同时非空即视为可用，否则 Review skill 走 Claude 内评估路径。",
+  "cnki":     {"endpoint": "", "key": ""},
+  "turnitin": {"endpoint": "", "key": ""},
+  "wanfang":  {"endpoint": "", "key": ""},
+  "gptzero":  {"endpoint": "", "key": ""},
+  "zhuque":   {"endpoint": "", "key": ""}
+}
