@@ -11,6 +11,8 @@ description: 本科毕设论文绘图 skill。生成两类图：(A) 概念示意
 
 ## 前置条件
 
+先按需读取 `../common/forbidden_rules.md`，只加载“全局绝对禁止”“Drawing 禁忌”“用户自定义补充区”；用户自定义补充区优先级最高。
+
 1. 用户已安装 codex 插件（`/plugin install codex@openai-codex`），本 skill **直接调用**，不写安装步骤；
 2. 涉及 python 工具（matplotlib/seaborn/plotly/科学绘图脚本）时按需 Read `env.json`（默认 `conda run -n dfv python`）。
 
@@ -54,3 +56,4 @@ description: 本科毕设论文绘图 skill。生成两类图：(A) 概念示意
 - `references/codex_prompt_template.md` — gpt-image2 prompt 模板（A/B 两类）
 - `references/chart_tool_candidates.md` — 数据图工具候选清单
 - `env.example.json` — python 解释器配置样板（复制为 env.json 后修改）
+- `../common/forbidden_rules.md` — 全局禁忌与用户自定义补充
